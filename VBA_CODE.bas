@@ -10,6 +10,10 @@ Dim url As String
 Set IE = New InternetExplorer
 IE.Visible = False
 
+Worksheets("Investimentos").Range("J3:K45").Select
+Selection.NumberFormat = "General"
+Worksheets("Investimentos").Range("A1").Select
+
 For Each c In Worksheets("Investimentos").Range("custodia").Rows
  
     papel = c.Cells(1, 1).Value
@@ -33,7 +37,7 @@ DoNothing:
 Next
     
     
-Worksheets("Investimentos").Range("J3:J45").Select
+Worksheets("Investimentos").Range("J3:K45").Select
 Selection.Style = "Currency"
 Worksheets("Investimentos").Range("A1").Select
     
